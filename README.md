@@ -4,7 +4,7 @@ Projeto acadêmico desenvolvido em **PHP Puro**, focado na implementação rigor
 
 ## Design Inspirado na Cloudflare
 
-![Demonstração do PromptVault](demo.gif)
+![Demonstração do PromptVault](public/images/demo.gif)
 
 ## 📌 O que é o PromptVault?
 

@@ -1,17 +1,9 @@
--- ============================================
--- Cofre de Engenharia de Prompts de IA
--- Script de criação do banco de dados
--- ============================================
-
 CREATE DATABASE IF NOT EXISTS cofre_prompts
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
 
 USE cofre_prompts;
 
--- ============================================
--- Tabela: projetos (Pastas de organização)
--- ============================================
 CREATE TABLE IF NOT EXISTS projetos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(150) NOT NULL,
@@ -21,9 +13,6 @@ CREATE TABLE IF NOT EXISTS projetos (
     atualizado_em DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- ============================================
--- Tabela: prompts (As instruções de IA)
--- ============================================
 CREATE TABLE IF NOT EXISTS prompts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     projeto_id INT NOT NULL,
@@ -37,9 +26,6 @@ CREATE TABLE IF NOT EXISTS prompts (
     FOREIGN KEY (projeto_id) REFERENCES projetos(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- ============================================
--- Tabela: historico_versoes (Log de alterações)
--- ============================================
 CREATE TABLE IF NOT EXISTS historico_versoes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     prompt_id INT NOT NULL,
@@ -51,9 +37,6 @@ CREATE TABLE IF NOT EXISTS historico_versoes (
     FOREIGN KEY (prompt_id) REFERENCES prompts(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- ============================================
--- Dados de exemplo
--- ============================================
 INSERT INTO projetos (nome, descricao, cor) VALUES
 ('Assistente de Código', 'Prompts para gerar e revisar código de programação', '#f48120'),
 ('Copywriting', 'Instruções para geração de textos de marketing', '#e040fb'),

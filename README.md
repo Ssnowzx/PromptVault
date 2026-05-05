@@ -24,8 +24,7 @@ Este protótipo atende a todos os critérios estabelecidos para a disciplina:
         *   📁 **Projetos:** Agrupadores lógicos de prompts.
         *   ⚡ **Prompts:** As instruções em si (pertencem a um Projeto).
         *   🔄 **Histórico de Versões:** Registros automáticos gerados sempre que um Prompt é atualizado.
-4.  **Em Duplas:** (Documente aqui sua dupla, se aplicável).
-5.  **Tema e Layout Livres:** Escolhido um tema moderno (Engenharia de Prompts) com **UI Premium** estritamente inspirada no Design System oficial da **Cloudflare**.
+4.  **Tema e Layout Livres:** Escolhido um tema moderno (Engenharia de Prompts) com **UI Premium** estritamente inspirada no Design System oficial da **Cloudflare**.
 
 ## 🚀 Como Executar o Projeto
 
